@@ -4,6 +4,7 @@
     --bg-color: #012676;
     --main-tekst: #fafafa;
     --sec-tekst: #D4D4D8;
+    --btn: #F9B521;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 
 h1 {
     color: var(--main-tekst);
-    font-size: 28px;
+    font-size: 32px;
     margin: 20vh 0 0 10vw;
 }
 
@@ -24,18 +25,48 @@ h1 {
     margin-top: 0;
     margin-left: 10vw;
     font-size: 16px;
+    font-weight: bold;
     color: var(--sec-tekst);
 }
 
-form {
+.form-cont {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 5px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 250px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
 }
 
 label {
+    font-weight: bold;
     color: var(--sec-tekst);
+}
+
+.submit-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    background: var(--btn);
+    color: var(--main-tekst);
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+
 }
 
 .have-cont {
@@ -46,9 +77,10 @@ label {
 
 .have {
     color: var(--sec-tekst);
+    font-size: 20px;
 }
 
 .log-btn {
+    font-size: 20px;
     color: var(--sec-tekst);
-    border-bottom: 2px solid var(--sec-tekst);
 }
