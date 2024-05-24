@@ -2,12 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuszerka | Dodaj korepetycje</title>
+    <link rel="stylesheet" href="korepetycje.css">
+    <title>Fuszerka | Korepetycje</title>
 </head>
 <body>
     <div class="container">
-        <header></header>
+        <header>
+            <h1>
+                Dodaj korepetycje
+            </h1>
+        </header>
+        <div class="info">
+            <p>Podaj</p>
+        </div>
+        <select name="sub" id="sub" class="sub" required>
+            <option value="przedmiot" class="" >Przedmiot</option>
+            <option value="">Matematyka</option>
+        </select>
+        <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        <button class="add" type="submit">Dodaj</button>
     </div>
 </body>
 </html>
