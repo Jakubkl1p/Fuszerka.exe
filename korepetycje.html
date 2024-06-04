@@ -36,12 +36,27 @@
         <div class="info">
             <p>Podaj</p>
         </div>
-        <select name="sub" id="sub" class="sub" required>
-            <option value="przedmiot" class="" >Przedmiot</option>
-            <option value="">Matematyka</option>
-        </select>
-        <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
-        <button class="add" type="submit">Dodaj</button>
+        <form method="post">
+            <div class="desc-cont">
+            
+            <select name="sub" id="sub" class="sub" required>
+                <option value="przedmiot" class="" >Przedmiot</option>
+                <option value="">Matematyka</option>
+            </select>
+            <select name="sub" id="sub" class="sub" required>
+                <option value="przedmiot" class="" >Dział</option>
+                <option value="">Matematyka</option>
+            </select>
+            <select name="sub" id="sub" class="sub" required>
+                <option value="przedmiot" class="" >Temat</option>
+                <option value="">Matematyka</option>
+            </select>
+                <textarea name="desc" id="desc" cols="30" rows="10" placeholder="opis"></textarea>
+            </div>
+            <div class="add-cont">
+                <button class="add" type="submit">Dodaj</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
