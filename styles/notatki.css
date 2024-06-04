@@ -6,6 +6,7 @@
     --sec-tekst: #D4D4D8;
     --btn: #F9B521;
     --nav-bar: #E4E4E7;
+    --article-background: #F3F3F3;
 }
 
 body * {
@@ -22,6 +23,7 @@ body * {
     left: 50%;
     margin-top: -2%;
     margin-left: -200px;
+    background: #fff;
 }
 
 .pic-cont {
@@ -56,10 +58,7 @@ h1 {
 }
 
 .main-container {
-  padding: 1rem 3rem;
-}
-
-.main-container > form {
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -73,4 +72,17 @@ select {
   background: var(--sec-tekst);
   border: none;
   border-radius: 5px;
+}
+
+.article {
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--article-background);
+}
+.add-notes {
+  margin: auto;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  top: 82%;
 }
