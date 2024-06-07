@@ -52,15 +52,32 @@ h1 {
     background-color: var(--select-bg);
     padding: 1rem;
     border-radius: 20px;
-    margin: 2rem 1rem;
-    box-shadow: 5px 5px 5px black;
-    max-width: 400px;
-    width: 80%;
-    max-height: 300px;
-    height: 80%;
+    margin: 1rem 0.25rem;
+    box-shadow: 5px 5px 10px grey;
+    max-width: 475px;
+    width: 75%;
+    max-height: 400px;
+    height: 75%;
 }
 
 .event p{
     padding: 0.5rem;
     font-size: 18px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+
+    .event{
+        width: 100%;
+        max-width: 95%;
+    }
 }
