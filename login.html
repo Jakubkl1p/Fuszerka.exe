@@ -50,7 +50,9 @@ form.addEventListener("submit", (e) => {
   })
 })
 .then(response => response.json())
-.then(data => console.log(data))
+.then(data => {
+     localStorage.setItem("token", data.token);
+})
 .catch(error => console.error(error));
 })
 </script>
