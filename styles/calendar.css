@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+    --bg-color: #fafafa;
+    --main-tekst: #012676;
+    --u-grey: #e0e0e0;
+    --nav-bar: #E4E4E7;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-cont {
+    margin: auto;
+    position: fixed;
+    top: 92%;
+    left: 50%;
+    margin-top: -2%;
+    margin-left: -200px;
+}
+
+.pic-cont {
+    border-top: 5px solid var(--nav-bar);
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-cont {
+    padding: 10px 20px;
+    margin: auto;
+}
+
+h1{
+    color: var(--main-tekst);
+    font-size: 32px;
+    margin: 2vh 0 0 5vw;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.events{
+    width: 100%;
+    max-width: 90%;
+    background-color: var(--u-grey);
+    border-radius: 10px;
+    margin: 1rem 0 3rem 0;
+}
+
+.events h2{
+    margin: 2vh 0 0 5vw;
+}
+
+.events li{
+    margin: 1vh 0 0 5vw;
+}
+
+.calendar {
+    width: 100%;
+    max-width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header h2 {
+    color: var(--main-tekst);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header button {
+    background: none;
+    border: none;
+    background-color: var(--main-tekst);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div, .days div {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.weekdays {
+    background-color: var(--u-grey);
+}
+
+.days div {
+    border: 1px solid var(--u-grey);
+}
+
+.today {
+    background-color: var(--main-tekst);
+    color: #fff;
+}
+
+.prev-date, .next-date {
+    color: #ccc;
+}
