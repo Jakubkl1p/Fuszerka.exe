@@ -15,7 +15,7 @@
             <p class="desc">Zaloguj się, aby kontynuować.</p>
         </div>
         <div class="form-cont">
-        <form action="post">
+        <form id="loginForm">
             <label for="Email">Email</label>
             <input type="email" name="email" id="email">
             <label for="Haslo">Haslo</label>
@@ -31,5 +31,28 @@
             <p class="have">Jesteś nowy? <a href="register.html" class="log-btn">Zarejestruj się</a></p>
         </div>
     </div>
+        <script>
+const form = document.getElementById("loginForm");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailValue = document.getElementById("email").value;
+    const passwordValue = document.getElementById("password").value;
+
+   fetch('api/user/login', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    email: emailValue,
+    password: passwordValue,
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+})
+</script>
 </body>
 </html>
