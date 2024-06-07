@@ -12,34 +12,36 @@
             <h1>Witaj!</h1>
         </header>
         <div class="info">
-            <p class="desc">Zaloguj się, aby kontynuować.</p>
+            <p class="desc">Zarejestruj się i dołącz do szkolnej społeczności!</p>
         </div>
         <div class="form-cont">
-        <form id="loginForm">
+        <form id="registerForm">
             <label for="Email">Email</label>
             <input type="email" name="email" id="email">
             <label for="Haslo">Haslo</label>
             <input type="password" name="password" id="password">
+            <label for="repeat">Powtórz hasło</label>
+            <input type="password" name="repeat" id="repeat">
             <div class="submit-cont">
                 <button class="submit" type="submit">
-                    ZALOGUJ
+                    ZAREJSTRUJ
                 </button>
             </div>
         </form>
         </div>
         <div class="have-cont">
-            <p class="have">Jesteś nowy? <a href="register.html" class="log-btn">Zarejestruj się</a></p>
+            <p class="have">Masz już konto? <a href="login.html" class="log-btn">Zaloguj się</a></p>
         </div>
     </div>
-    <script>
-const form = document.getElementById("loginForm");
+            <script>
+const form = document.getElementById("registerForm");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const emailValue = document.getElementById("email").value;
     const passwordValue = document.getElementById("password").value;
 
-   fetch('api/user/login', {
+   fetch('api/user/register', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -47,6 +49,12 @@ form.addEventListener("submit", (e) => {
   body: JSON.stringify({
     email: emailValue,
     password: passwordValue,
+    first_name: null,
+    last_name: null,
+    nick: null,
+    about: null,
+    class: null,
+    isTutor: false
   })
 })
 .then(response => response.json())
