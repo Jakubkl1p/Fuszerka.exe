@@ -46,55 +46,55 @@ h1 {
     margin: 20px 10px;
 }
 
-.info {
-    margin-top: 50px;
-    padding-left: 10vw;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.sub {
-    min-width: 300px;
-    height: 40px;
-    margin: 10px 0;
+.container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text);
 }
 
 select {
-    padding-left: 10px;
-    color: var(--text);
+    font-size: 110%;
+    width: 100%;
+    height: 50px;
+    padding: 4px 8px;
     background: var(--select-bg);
-    font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .desc-cont {
     display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 50%;
 }
 
 textarea {
-    margin-top: 30px;
-    max-width: 300px;
-    font-weight: 500;
-    padding: 10px;
+    height: 150px;
+    width: 100%;
+    padding: 4px 8px;
     background: var(--select-bg);
     color: var(--text);
     border: none;
-    border-radius: 10px;
-}
-
-.add-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    border-radius: 5px;
+    margin: 0.5rem;
 }
 
 button {
@@ -102,8 +102,21 @@ button {
     padding: 15px;
     border-radius: 10px;
     border: none;
-    width: 40%;
+    width: 100%;
     background: var(--btn);
-    color: var(--bg-color);
     font-weight: 600;
+    margin: 0.5rem;
+    color: var(--bg-color);
+}
+
+form a{
+    color: var(--header-color);
+    margin: 0.5rem;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px){
+    form{
+        width: 70%;
+    }
 }

@@ -15,13 +15,20 @@ body * {
   margin: 0;
 }
 
+.icon {
+  position: fixed;
+  left: 96%;
+  top: 3%;
+}
+
 .nav-cont {
-    margin: auto;
-    position: fixed;
-    top: 92%;
-    left: 50%;
-    margin-top: -2%;
-    margin-left: -200px;
+  position: fixed;
+  top: 92%;
+  left: 0;
+  margin-top: -2%;
+  width: 100%;
+  background-color: var(--main-background);
+  padding-bottom: 0.25rem;
 }
 
 .pic-cont {
@@ -40,6 +47,8 @@ body * {
 h1 {
   color: var(--main-tekst);
   font-size: 32px;
+  margin: 10px 20px;
+  font-weight: bold;
 }
 
 .container {
@@ -48,17 +57,10 @@ h1 {
   gap: 2rem;
 }
 
-.header {
-  padding: 1.5rem;
-  padding-bottom: .5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .main-container {
   height: 70vh;
   padding: 1rem 3rem;
+  width: 100%;
 }
 
 .main-container > form {
@@ -71,30 +73,34 @@ h1 {
 select {
   font-size: 110%;
   width: 100%;
-  height: 32px;
+  height: 50px;
   padding: 4px 8px;
   background: var(--sec-tekst);
   border: none;
   border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
 }
+
 button {
-  color: var(--main-tekst);
+  color: var(--main-background);
   font-size: 110%;
   width: 100%;
-  height: 32px;
+  height: 50px;
   padding: 4px 8px;
   background: var(--btn);
   border: none;
   border-radius: 5px;
 }
 
-@media (min-width: 768px) {
-  .header * {
-    font-size: 175% ;
-  } 
-  select {
-    font-size: 120%;
+@media only screen and (max-width:768px) {
+  .nav-cont{
+    margin-top: -3%;
   }
+
+  .icon{
+    left: 88%;
+}
 }
 
 @media (min-width: 1250px) {
@@ -108,8 +114,6 @@ button {
   }
   select {
     text-align: center;
-    color: var(--main-background);
     padding: 10px;
-    height: 80px;
   }
 }

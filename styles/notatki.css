@@ -18,13 +18,13 @@ body * {
 }
 
 .nav-cont {
-    margin: auto;
-    position: fixed;
-    top: 92%;
-    left: 50%;
-    margin-top: -2%;
-    margin-left: -200px;
-    background: #fff;
+  position: fixed;
+  top: 92%;
+  left: 0;
+  margin-top: -2%;
+  width: 100%;
+  background-color: var(--main-background);
+  padding-bottom: 0.25rem;
 }
 
 .pic-cont {
@@ -58,26 +58,11 @@ h1 {
   justify-content: space-between;
 }
 
-.icon {
-  transform: rotate(180deg);
-}
-
-.icon2 {
-  position: relative;
-  left: 4.3px;
-  transform: rotate(90deg);
-  transition-duration: 1000ms;
-}
-
-.icon-center {
-  display: flex;
-  justify-content: center;
-  margin-top: .5rem ;
-}
 .main-container {
   padding: 1rem 2rem;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
+  margin-bottom: 2rem;
 }
 
 select {

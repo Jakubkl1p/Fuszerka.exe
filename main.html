@@ -3,63 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Fuszerka | główna</title>
+    <title>Fuszerka | Główna/Notatki</title>
+    <link rel="stylesheet" href="./styles/notatki.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>
-                Strona głowna
-            </h1>
-        </header>
-        <main class="main-container">
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
+      <div class="header">
+        <header><h1>Strona Główna</h1></header>
+      </div>
+      <div class="area">
+            <label for="search" class="search">
+              <input type="text" name="search" id="search" placeholder="Szukaj">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/></svg>
+            </label>
+          </div>
+      <main class="main-container">
+          <div class="form-container">
+            <form action="" id="form">
+              <label class="form-group">
+                  <input type="text" placeholder="tytuł" required>
+              </label>
+              <label class="form-group">
+                  <input type="text" placeholder="przedmiot" required>
+              </label>
+              <label class="form-group">
+                  <input type="text" placeholder="temat" required>
+              </label>
+              <label class="form-group">
+                  <textarea placeholder="opis"></textarea>
+              </label>
+              <div class="add-button"></div>
             </div>
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
-            </div>
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
-            </div>
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
-            </div>
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
-            </div>
-            <div class="event">
-                <h2>Nowości</h2>
-                <p></p>
-            </div>
-        </main>
-        <footer>
-            <div class="nav-cont">
-                <div class="pic-cont">
-                    <div class="img-cont">
-                        <a href="korepetytorzy.html"><img src="img/people.svg" alt="group" width="40px" height="40px"></a>
-                    </div>
-                    <div class="img-cont">
-                        <a href="korepetycje.html"><img src="img/add.svg" alt="korepetycje" width="40px" height="40px"></a>
-                    </div>
-                    <div class="img-cont">
-                        <a href="main.html"><img src="img/home.svg" alt="home" width="40px" height="40px"></a>
-                    </div>
-                    <div class="img-cont">
-                        <a href="kalendarz.html"><img src="img/calendar.svg" alt="calendar" width="40px" height="40px"></a>
-                    </div>
-                    <div class="img-cont">
-                        <a href="profil.html"><img src="img/profil_active.svg" alt="user" width="40px" height="40px"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+          </form>
+          <div class="articles">
+            <article class="article">
+              <header>
+                <h2>
+                  Notatka
+                </h2>
+              </header>
+              <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Niostrud Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. </p>
+            </article>  
+            <article class="article">
+              <header>
+                <h2>
+                  Notatka
+                </h2>
+              </header>
+              <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Niostrud Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. </p>
+            </article>
+            <article class="article">
+              <header>
+                <h2>
+                  Notatka
+                </h2>
+              </header>
+              <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Niostrud Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. </p>
+            </article>
+            <article class="article">
+              <header>
+                <h2>
+                  Notatka
+                </h2>
+              </header>
+              <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Niostrud Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. </p>
+            </article>
+        </div>
+      </main>
+      <footer>
+        <div class="nav-cont">
+          <div class="pic-cont">
+              <div class="img-cont">
+                  <a href="szukaj_korepetytora.html"><img src="img/people.svg" alt="group" width="40px" height="40px"></a>
+              </div>
+              <div class="img-cont">
+                  <a href="korepetycje.html"><img src="img/add.svg" alt="korepetycje" width="40px" height="40px"></a>
+              </div>
+              <div class="img-cont">
+                  <a href="main.html"><img src="img/home_active.svg" alt="home" width="40px" height="40px"></a>
+              </div>
+              <div class="img-cont">
+                  <a href="kalendarz.html"><img src="img/calendar.svg" alt="calendar" width="40px" height="40px"></a>
+              </div>
+              <div class="img-cont">
+                  <a href="profil.html"><img src="img/profil.svg" alt="user" width="40px" height="40px"></a>
+              </div>
+          </div>
+        </div>
+      </footer>
     </div>
 </body>
 </html>

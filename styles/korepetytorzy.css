@@ -45,9 +45,9 @@ h1 {
     font-weight: bold;
 }
 
-.arrow-cont {
+.arrow-cont{
     position: fixed;
-    left: 88%;
+    left: 96%;
     top: 3%;
 }
 
@@ -86,4 +86,11 @@ button {
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .arrow-cont{
+        left: 88%;
+    }
 }
