@@ -10,19 +10,24 @@
     <div class="container">
         <header>
             <h1>Witaj!</h1>
+            <div class="info">
+                <p class="desc">Zaloguj się, aby kontynuować.</p>
+            </div>
         </header>
-        <div class="info">
-            <p class="desc">Zaloguj się, aby kontynuować.</p>
-        </div>
+        
         <div class="form-cont">
         <form id="loginForm">
+            <div class="label-cont">
             <label for="Email">Email</label>
             <input type="email" name="email" id="email">
+            </div>
+            <div class="label-cont">
             <label for="Haslo">Haslo</label>
             <input type="password" name="password" id="password">
+            </div>
             <div class="submit-cont">
                 <button class="submit" type="submit">
-                    ZALOGUJ
+                    <a href="main.html">ZALOGUJ</a>
                 </button>
             </div>
         </form>

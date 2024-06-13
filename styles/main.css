@@ -15,7 +15,7 @@ body{
 
 .nav-cont {
     position: fixed;
-    top: 92%;
+    top: 95%;
     left: 0;
     margin-top: -2%;
     width: 100%;
@@ -74,6 +74,10 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+    .nav-cont {
+        top: 92%;
+        background: var(--label-text);
+    }
     .main-container {
         display: flex;
         flex-direction: column;
