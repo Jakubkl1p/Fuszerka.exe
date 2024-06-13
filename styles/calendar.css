@@ -16,12 +16,13 @@ body {
 }
 
 .nav-cont {
-    margin: auto;
     position: fixed;
     top: 92%;
-    left: 50%;
+    left: 0;
     margin-top: -2%;
-    margin-left: -200px;
+    width: 100%;
+    background-color: var(--);
+    padding-bottom: 0.25rem;
 }
 
 .pic-cont {
