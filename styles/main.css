@@ -81,6 +81,6 @@ h1 {
     .event {
         width: 100%;
         max-width: 95%;
-        height: min-content;
+        height: 200px; /*change to min-content ot sth*/
     }
 }
