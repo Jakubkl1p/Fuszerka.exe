@@ -37,29 +37,39 @@
         </div>
     </div>
     <script>
-const form = document.getElementById("loginForm");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const emailValue = document.getElementById("email").value;
-    const passwordValue = document.getElementById("password").value;
-
-   fetch('api/user/login', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    email: emailValue,
-    password: passwordValue,
-  })
-})
-.then(response => response.json())
-.then(data => {
-     localStorage.setItem("token", data.token);
-})
-.catch(error => console.error(error));
-})
-</script>
+        const form = document.getElementById("loginForm");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+        
+            const emailValue = document.getElementById("email").value;
+            const passwordValue = document.getElementById("password").value;
+        
+           fetch('https://korepetycjetesty.zsti.me/api/user/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+            
+          },
+          body: JSON.stringify({
+            email: emailValue,
+            password: passwordValue,
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+             localStorage.setItem("token", data.token)
+             if(data.token){window.location.href = "main.html"}      ;
+        })
+        .catch(error => {
+            console.error(error)
+            errorP = document.createElement("p")
+            errorP.innerHTML = "Nieprawidłowe dane logowania"
+            form.appendChild(errorP)
+        
+        } );
+        
+        })
+        
+        </script>
 </body>
 </html>

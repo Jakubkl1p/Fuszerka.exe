@@ -40,34 +40,34 @@
             <p class="have">Masz już konto? <a href="login.html" class="log-btn">Zaloguj się</a></p>
         </div>
     </div>
-            <script>
-const form = document.getElementById("registerForm");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const emailValue = document.getElementById("email").value;
-    const passwordValue = document.getElementById("password").value;
-
-   fetch('api/user/register', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    email: emailValue,
-    password: passwordValue,
-    first_name: null,
-    last_name: null,
-    nick: null,
-    about: null,
-    class: null,
-    isTutor: false
-  })
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
-})
-</script>
+    <script>
+        const form = document.getElementById("registerForm");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+        
+            const emailValue = document.getElementById("email").value;
+            const passwordValue = document.getElementById("password").value;
+        
+           fetch('https://korepetycjetesty.zsti.me/api/user/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: emailValue,
+            password: passwordValue,
+            first_name: null,
+            last_name: null,
+            nick: null,
+            about: null,
+            class: null,
+            isTutor: false
+          })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+        })
+        </script>
 </body>
 </html>

@@ -24,8 +24,8 @@
                     <img src="img/star.svg" alt="star">
                 </div>
                 <div class="desc-cont">
-                    <div class="mail"><p><b>Email</b>: email@zsti.pl</p></div>
-                    <div class="git"><p><b>Github</b>: Użytkownik2137</p></div>
+                    <div class="mail"><p id="emailDisplay"><b>Email</b>: </p></div>
+                    <div class="git"><p id="aboutDisplay"><b>About</b>: </p></div>
                 </div>
             </section>
             <section class="buttons">
@@ -44,8 +44,8 @@
                     <a href="">Kompetencje</a>
                     <img src="img/arrow-left.svg" alt="right_arrow">
                 </div>
-                <div class="log-out">
-                    <a href="">Wyloguj</a>
+                <div class="log-out" id="log-out">
+                    <a >Wyloguj</a>
                     <img src="img/arrow-left.svg" alt="right_arrow">
                 </div>
                 </div>
@@ -73,5 +73,56 @@
             </div>
         </footer>
     </div>
+    <script>
+        const logOutButton = document.querySelector('#log-out')
+        const emailDisplay = document.querySelector('#emailDisplay')
+        const aboutDisplay = document.querySelector('#aboutDisplay')
+        fetch('https://korepetycjetesty.zsti.me/api/user/getDataFromToken', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+      Authorization:`Bearer ${localStorage.getItem('token')} `
+   },
+   body: JSON.stringify({
+        
+   })
+ })
+ .then(response => response.json())
+ .then(data => {
+   console.log(data)
+   email = data.email
+   about = data.about
+    emailDisplay.innerHTML = `<b>Email</b>: ${email}` 
+    aboutDisplay.innerHTML = `<b>About</b>: ${about}`
+    localStorage.setItem('email', email)
+
+ })
+ .catch(error => {
+     console.error(error)
+ } );
+    logOutButton.addEventListener("click",(e)=>{
+        fetch('https://korepetycjetesty.zsti.me/api/user/logout', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+      
+   },
+   body: JSON.stringify({
+        "token":localStorage.getItem('token')
+   })
+ })
+ .then(response => response.json())
+ .then(data => {
+   console.log(data)
+   localStorage.clear()
+   if(data){window.location.href = "login.html"} 
+
+ })
+ .catch(error => {
+     console.error(error)
+ } );
+    })  
+
+     </script>
 </body>
 </html>

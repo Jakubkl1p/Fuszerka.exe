@@ -21,18 +21,18 @@
           <div class="form-container">
             <form action="" id="form">
               <label class="form-group">
-                  <input type="text" placeholder="tytuł" required>
+                  <input type="text" placeholder="tytuł" id="tytul" required>
               </label>
               <label class="form-group">
-                  <input type="text" placeholder="przedmiot" required>
+                  <input type="text" placeholder="przedmiot" id="przedmiot" required>
               </label>
               <label class="form-group">
-                  <input type="text" placeholder="temat" required>
+                  <input type="text" placeholder="temat" id="temat" required>
               </label>
               <label class="form-group">
-                  <textarea placeholder="opis"></textarea>
+                  <textarea placeholder="opis" id="opis"></textarea>
               </label>
-              <div class="add-button"></div>
+              <button><div class="add-button"></div></button>
             </div>
           </form>
           <div class="articles">
@@ -92,5 +92,46 @@
         </div>
       </footer>
     </div>
+    <script>
+      const iconHamburger = document.getElementById("a");
+      const icon = document.getElementById("icon2");
+      const form = document.querySelector('#form')
+      const addButton  = document.getElementById('add-button')
+      const tytulInput = document.getElementById('tytul')
+      const przedmiotInput = document.getElementById('przedmiot')
+      const tematInput = document.getElementById('temat')
+      const opisInput = document.getElementById('opis')
+      
+      form.addEventListener("submit", (e) => {
+
+e.preventDefault()
+const tytul = tytulInput.value
+const przedmiot = przedmiotInput.value
+const temat = tematInput.value 
+const opis = opisInput.value
+
+fetch('https://korepetycjetesty.zsti.me/api/note/createNote', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization:`Bearer ${localStorage.getItem('token')} `
+},
+  body: JSON.stringify({
+    "noteTitle": tytul,
+    "noteText": opis,
+    "subjectName": przedmiot,
+    "topicName": temat
+
+})
+})
+.then(response => response.json())
+.then(data =>{
+  console.log(data)
+})
+.catch(error => {
+ console.error(error)
+} );
+})
+   </script>
 </body>
 </html>
