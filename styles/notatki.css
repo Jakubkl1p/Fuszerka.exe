@@ -7,6 +7,7 @@
     --btn: #F9B521;
     --nav-bar: #E4E4E7;
     --article-background: #F3F3F3;
+    --in-bg:#CACACA;
 }
 
 body * {
@@ -85,4 +86,100 @@ select {
   left: 50%;
   transform: translate(-50%, 20%);
   top: 82%;
+}
+
+.area{
+  display: flex;
+  justify-content: center;
+}
+
+.search{
+  background-color: var(--in-bg);
+  max-width: 250px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  justify-content: space-between;
+}
+
+.search input{
+  background-color: var(--in-bg);
+  width: 100px;
+  max-width: 60%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+svg{
+  transform: rotateZ(-180deg);
+  margin-right: 10px;
+}
+
+::placeholder{
+  color: #000;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+article{
+  width: 300px;
+  height: 250px;
+  max-width: 80%;
+  max-height: 80%;
+  flex-basis: 30%;
+  margin: 1rem;
+}
+
+.articles{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group input{
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 20px auto 0;
+}
+
+.add-button:before {
+  content: '+';
+  font-size: 18px;
+  font-weight: bold;
 }
