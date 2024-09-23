@@ -115,6 +115,10 @@ select {
   margin-left: 10px;
 }
 
+.search input:focus {
+  outline: none;
+}
+
 svg{
   transform: rotateZ(-180deg);
   margin-right: 10px;
@@ -153,6 +157,11 @@ article{
   display: flex;
   flex-direction: column-reverse;
   transition-duration: 500ms;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group input{
